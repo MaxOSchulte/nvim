@@ -4,3 +4,6 @@
 
 vim.g.undotree_WindowLayout = 2
 vim.g.undotree_DiffpanelHeight = 20
+
+vim.opt.spelllang = 'en_us,de_de'
+vim.opt.spell = true
