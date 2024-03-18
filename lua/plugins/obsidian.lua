@@ -2,7 +2,7 @@ return {
   "epwalsh/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
   lazy = true,
-  ft = "markdown",
+  ft = "*",
   -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
   -- event = {
   --   -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
@@ -11,11 +11,20 @@ return {
   --   "BufNewFile path/to/my-vault/**.md",
   -- },
   dependencies = {
-    -- Required.
     "nvim-lua/plenary.nvim",
-
-    -- see below for full list of optional dependencies 👇
+    "hrsh7th/nvim-cmp",
+    "nvim-telescope/telescope.nvim",
+    "nvim-treesitter/nvim-treesitter",
   },
+  keys = {
+    { "<leader>oo", "<cmd>ObsidianOpen<cr>",        desc = "Open Obsidian" },
+    { "<leader>on", "<cmd>ObsidianNew<cr>",         desc = "Create a new Obsidian Document" },
+    { "<leader>os", "<cmd>ObsidianSearch<cr>",      desc = "Search Obsidian" },
+    { "<leader>of", "<cmd>ObsidianQuickSwitch<cr>", desc = "Obsidian Find Files" },
+    { "<leader>op", "<cmd>ObsidianPasteImg<cr>",    desc = "Obsidian Paste Image" },
+    { "<leader>or", "<cmd>ObsidianRename<cr>",      desc = "Obsidian Rename current note" },
+    { "<leader>ot", "<cmd>ObsidianTemplate<cr>",    desc = "Insert Obsidian Template into file" },
+  }, -- see below for full list of optional dependencies 👇
   opts = {
     workspaces = {
       {

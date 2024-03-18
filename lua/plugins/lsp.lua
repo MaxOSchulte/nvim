@@ -6,6 +6,7 @@ return {
     opts = {
       loglevel = "debug",
       servers = {
+        pyright = {},
         html = {
 
           hover = {

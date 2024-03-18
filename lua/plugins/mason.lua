@@ -1,10 +1,11 @@
 return {
-    {
-        "williamboman/mason.nvim",
-        opts = {
-            ensure_installed = {
-                "shellcheck",
-            },
-        },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "shellcheck",
+        "pyright"
+      },
     },
+  },
 }
